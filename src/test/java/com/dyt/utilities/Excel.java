@@ -39,15 +39,22 @@ public class Excel {
 	}
 	//---------------------------------
 	//get cell data
-	public static String getCellData(String filePath, String sheetName, int rowNumber, int colNumber) throws IOException
+	public static String getCellData(String filePath, String sheetName, int rowNumber, int colNumber)
 	{
-		String cellText;
-		File file = new File(filePath);
-		inputstream = new FileInputStream(file);
-		workbook = new XSSFWorkbook(inputstream);
-		XSSFSheet worksheet = workbook.getSheet(sheetName);
-		Row row = worksheet.getRow(rowNumber-1);
-		cellText = row.getCell(colNumber).getStringCellValue();		
+		String cellText = null;
+		try {			
+			File file = new File(filePath);
+			inputstream = new FileInputStream(file);
+			workbook = new XSSFWorkbook(inputstream);
+			XSSFSheet worksheet = workbook.getSheet(sheetName);
+			Row row = worksheet.getRow(rowNumber-1);
+			cellText = row.getCell(colNumber).getStringCellValue();			
+		}
+		
+		catch(Exception e) {
+			
+		}
+		
 		return cellText;
 	}	
 	//---------------------------------
