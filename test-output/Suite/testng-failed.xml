@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.dyt.hrm.testcases.Leave_TestCases">
+        <methods>
+          <include name="setupReport"/>
+          <include name="flushReportAndOpen"/>
+          <include name="launchBrowser"/>
+          <include name="tc001_VerifyLoginAuthentication"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.dyt.hrm.testcases.Leave_TestCases -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

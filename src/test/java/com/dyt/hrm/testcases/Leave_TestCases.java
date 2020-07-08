@@ -2,35 +2,30 @@ package com.dyt.hrm.testcases;
 
 import org.testng.annotations.Test;
 
-public class Leave_TestCases {
+import com.dyt.utilities.ExtentReport;
+
+public class Leave_TestCases extends BaseTestClass {
 	
 	@Test
 	void tc001_VerifyLoginAuthentication()
-	{			
-		//Step 1: launch login page
+	{		
+		ExtentReport.log(false, "Login successful", "Login unsuccessful");
 		
-		//Step 2: verify login authentication with valid data
-		
-		//Step 3: verify login authentication with invalid data
-		
-		//Step n: close application
 	}
 	
 	@Test
 	void tc002_ApplyLeave_Validate()
-	{
+	{		
 		
-		
-		
+		ExtentReport.log(true, "Apply Leave successful", "Apply Leave unsuccessful");
 		
 	}
 	
 	@Test
 	void tc003_CancelLeave_Validate()
-	{
+	{		
 		
-		
-		
+		ExtentReport.log(false, "Cancel leave successful", "Cancel leave unsuccessful");
 		
 	}
 	

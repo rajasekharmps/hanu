@@ -1,6 +1,8 @@
 package com.dyt.hrm.testcases;
 
-public class MyInfo_TestCases {
+public class MyInfo_TestCases extends BaseTestClass
+
+{
 	
 	
 
