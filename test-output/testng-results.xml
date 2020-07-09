@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="28964" started-at="2020-07-08T03:48:55Z" finished-at="2020-07-08T03:49:24Z">
+  <suite name="Suite" duration-ms="42091" started-at="2020-07-09T04:17:02Z" finished-at="2020-07-09T04:17:44Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="28964" started-at="2020-07-08T03:48:55Z" finished-at="2020-07-08T03:49:24Z">
+    <test name="Test" duration-ms="42091" started-at="2020-07-09T04:17:02Z" finished-at="2020-07-09T04:17:44Z">
       <class name="com.dyt.hrm.testcases.Leave_TestCases">
-        <test-method status="PASS" signature="setupReport()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="setupReport" is-config="true" duration-ms="400" started-at="2020-07-08T03:48:55Z" finished-at="2020-07-08T03:48:55Z">
+        <test-method status="PASS" signature="setupReport()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="setupReport" is-config="true" duration-ms="441" started-at="2020-07-09T04:17:02Z" finished-at="2020-07-09T04:17:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.reflect.Method)[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="launchBrowser" is-config="true" duration-ms="11142" started-at="2020-07-08T03:48:55Z" finished-at="2020-07-08T03:49:06Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.reflect.Method)[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="launchBrowser" is-config="true" duration-ms="11140" started-at="2020-07-09T04:17:02Z" finished-at="2020-07-09T04:17:14Z">
           <params>
             <param index="0">
               <value>
@@ -22,34 +22,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="tc001_VerifyLoginAuthentication()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="tc001_VerifyLoginAuthentication" duration-ms="860" started-at="2020-07-08T03:49:06Z" finished-at="2020-07-08T03:49:07Z">
+        <test-method status="PASS" signature="tc001_VerifyLoginAuthentication()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="tc001_VerifyLoginAuthentication" duration-ms="10502" started-at="2020-07-09T04:17:14Z" finished-at="2020-07-09T04:17:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc001_VerifyLoginAuthentication -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="closeBrowser" is-config="true" duration-ms="4296" started-at="2020-07-08T03:49:07Z" finished-at="2020-07-08T03:49:12Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="closeBrowser" is-config="true" duration-ms="4424" started-at="2020-07-09T04:17:24Z" finished-at="2020-07-09T04:17:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.reflect.Method)[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="launchBrowser" is-config="true" duration-ms="7536" started-at="2020-07-08T03:49:12Z" finished-at="2020-07-08T03:49:19Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.reflect.Method)[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="launchBrowser" is-config="true" duration-ms="9218" started-at="2020-07-09T04:17:29Z" finished-at="2020-07-09T04:17:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[void com.dyt.hrm.testcases.Leave_TestCases.tc002_ApplyLeave_Validate()]]>
+                <![CDATA[void com.dyt.hrm.testcases.Leave_TestCases.tc002_ApplyLeave()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="tc002_ApplyLeave_Validate()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="tc002_ApplyLeave_Validate" duration-ms="818" started-at="2020-07-08T03:49:19Z" finished-at="2020-07-08T03:49:20Z">
+        <test-method status="PASS" signature="tc002_ApplyLeave()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="tc002_ApplyLeave" duration-ms="6483" started-at="2020-07-09T04:17:38Z" finished-at="2020-07-09T04:17:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc002_ApplyLeave_Validate -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="closeBrowser" is-config="true" duration-ms="4225" started-at="2020-07-08T03:49:20Z" finished-at="2020-07-08T03:49:24Z">
+        </test-method> <!-- tc002_ApplyLeave -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="closeBrowser" is-config="true" duration-ms="274" started-at="2020-07-09T04:17:44Z" finished-at="2020-07-09T04:17:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="flushReportAndOpen()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="flushReportAndOpen" is-config="true" duration-ms="11067" started-at="2020-07-08T03:49:24Z" finished-at="2020-07-08T03:49:35Z">
+        <test-method status="PASS" signature="flushReportAndOpen()[pri:0, instance:com.dyt.hrm.testcases.Leave_TestCases@5622fdf]" name="flushReportAndOpen" is-config="true" duration-ms="12238" started-at="2020-07-09T04:17:45Z" finished-at="2020-07-09T04:17:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReportAndOpen -->

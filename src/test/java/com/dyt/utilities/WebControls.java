@@ -21,6 +21,21 @@ public class WebControls extends Configuration {
 	
 	
 	//---------------------------Methods section------------------------------------
+	public static boolean verifyPageTitle(String title) 
+	{
+		boolean staus = true;
+		try {
+			String appTitle = driver.getTitle();
+			if (!appTitle.equals(title)) staus = false;
+		}
+		
+		catch(Exception e) {
+			staus = false;
+		}
+		
+		return staus;
+	}
+	//-------------------------------------------------------------------------------
 	
 	/*
 	 * Method Name			: 	clickElement
@@ -190,6 +205,18 @@ public class WebControls extends Configuration {
 			return status;
 		}		
 		//---------------------------------------------------------------
-	
+		public static boolean isElementDisplayed(WebElement element)
+		{
+			boolean status = true;
+			try 
+			{
+				status = element.isDisplayed();
+			}
+			catch(Exception e) {
+				status = false;
+			}
+			return status;
+		}	
+		//---------------------------------------------------------------
 	
 }

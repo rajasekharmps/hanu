@@ -1,5 +1,9 @@
 package com.dyt.hrm.screenpages;
 
-public class ApplyLeave {
+import com.dyt.utilities.WebControls;
 
+public class ApplyLeave extends WebControls 
+{
+
+	
 }

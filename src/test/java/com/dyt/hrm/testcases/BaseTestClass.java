@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.dyt.hrm.config.Configuration;
-import com.dyt.utilities.ExtentReport;
+import com.dyt.utilities.Reporter;
 
 public class BaseTestClass extends Configuration {
 	
@@ -23,7 +23,7 @@ public class BaseTestClass extends Configuration {
 			public void setupReport()
 			{
 				System.out.println("******  Intializing Test Suite *******");		
-				ExtentReport.intializeReports();
+				Reporter.intializeReports();
 				
 				System.out.println("******  Test Suite is intialized sucessfully *******");
 			}	
@@ -31,7 +31,7 @@ public class BaseTestClass extends Configuration {
 			@BeforeMethod
 			public void launchBrowser(Method method)  throws IOException {		
 				CURRENT_TESTCASE = method.getName();
-				ExtentReport.startTest(CURRENT_TESTCASE);
+				Reporter.startTest(CURRENT_TESTCASE);
 				System.out.println("<<TestStart>> TestCase Name   " + CURRENT_TESTCASE + "  <<TestStart>>");
 				//Browser = Browser.toUpperCase();
 				
@@ -69,7 +69,7 @@ public class BaseTestClass extends Configuration {
 
 			@AfterMethod
 			public void closeBrowser() {		
-				ExtentReport.closeTest();
+				Reporter.closeTest();
 				driver.close();
 				System.out.println("<<TestEnd>> TestCase Name   " + CURRENT_TESTCASE + "  <<TestEnd>>");
 				System.out.println();			
@@ -79,7 +79,7 @@ public class BaseTestClass extends Configuration {
 			@AfterSuite
 			public void flushReportAndOpen() {
 				try {					
-					ExtentReport.flushReport();
+					Reporter.flushReport();
 					
 					Thread.sleep(2000);
 					
@@ -89,7 +89,7 @@ public class BaseTestClass extends Configuration {
 				
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
-				driver.get(ExtentReport.resultfile);
+				driver.get(Reporter.resultfile);
 				driver.navigate().refresh();
 			}		
 			//========================================================================
