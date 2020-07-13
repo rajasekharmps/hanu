@@ -7,10 +7,10 @@
   		<class name="com.dyt.hrm.testcases.Leave_TestCases">
   			<methods>
   				<include name="tc001_VerifyLoginAuthentication"/>
-  				<include name="tc002_ApplyLeave"/>
+  				<exclude name="tc002_ApplyLeave"/>
   				<exclude name="tc003_CancelLeave"/>
-  			</methods>  		
-  		</class>  	
+  			</methods>
+  		</class>
   	
   	</classes>
   </test> <!-- Test -->
