@@ -10,6 +10,7 @@ import com.dyt.utilities.Excel;
 
 public class Leave_TestCases extends BaseTestClass {
 	
+	@Test
 	void tc001_VerifyLoginAuthentication()
 	{		
 		//get test data of current test case from test data file(Excel)
@@ -46,10 +47,8 @@ public class Leave_TestCases extends BaseTestClass {
 		login.pageDisplayed();
 		login.loginAPP(data[0], data[1]);
 		home.pageDisplayed();
-		//applyLeave(data[2], data[3], data[4], data[5]);
-		
-	}
-	
+		//applyLeave(data[2], data[3], data[4], data[5]);		
+	}	
 	
 	@Test
 	void tc003_CancelLeave()
