@@ -3,6 +3,8 @@ package com.dyt.utilities;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -120,7 +122,56 @@ public class Excel {
 			System.out.println(e.getMessage());
 		}
 		
-		return rowData;	
+		return rowData;
+	}
+	//------------------------------------
+	public static HashMap<String, String> getRowData2(String filePath, String sheetName, String tcName)
+	{		
+		HashMap<String, String> rowData = new HashMap<String, String>();
+		boolean bTag = false;
+		try {
+			File file = new File(filePath);
+			inputstream = new FileInputStream(file);
+			workbook = new XSSFWorkbook(inputstream);
+			XSSFSheet worksheet = workbook.getSheet(sheetName);
+			int rowcount = worksheet.getLastRowNum()+1;
+			//Search for test case name in each row at column 2
+			for(int i=1; i<rowcount; i++) 
+			{
+				Row row = worksheet.getRow(i);
+				String exlTCName = row.getCell(1).getStringCellValue();
+				//verify test case name matched
+				if(tcName.equals(exlTCName.trim()))						
+				{
+					int colLastIndexCount = row.getLastCellNum();
+					//read test case row data to array
+					String cellText;
+					for(int j=2; j<=colLastIndexCount; j++)
+					{
+						cellText = row.getCell(j).getStringCellValue();
+						String[] arr  = cellText.split(":=");
+						rowData.put(arr[0], arr[1]);
+					}												
+					bTag = true;
+					break;
+				}						
+			}//outer for loop end
+			
+			if(bTag==false)
+			{
+				System.out.println(tcName +" - Test case not found in test data sheet - "+ sheetName);
+			}		
+		}//try end			
+	
+		catch(IOException e)	{
+			System.out.println(filePath +" - File not found or unable to read/write data");
+		}
+		
+		catch(Exception e)	{
+			System.out.println(e.getMessage());
+		}
+		
+		return rowData;
 	}
 	//---------------------------------
 }

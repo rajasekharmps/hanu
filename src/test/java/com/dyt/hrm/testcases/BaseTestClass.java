@@ -20,9 +20,8 @@ import com.dyt.hrm.config.Configuration;
 import com.dyt.utilities.Excel;
 import com.dyt.utilities.Reporter;
 
-public class BaseTestClass extends Configuration {
-	
-	//========================================================================	
+public class BaseTestClass extends Configuration {	
+			//========================================================================	
 			@BeforeSuite
 			public void setupReport()
 			{

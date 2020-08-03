@@ -1,5 +1,8 @@
 package com.dyt.hrm.testcases;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -15,7 +18,8 @@ public class Leave_TestCases extends BaseTestClass {
 	{		
 		//get test data of current test case from test data file(Excel)
 		String filepath = TESTDATA_PATH + TESTDATA_FILE;
-		String[] data = Excel.getRowData(filepath, "smoke", CURRENT_TESTCASE);
+		//String[] data = Excel.getRowData(filepath, "smoke", CURRENT_TESTCASE);
+		HashMap<String, String> data = Excel.getRowData2(filepath, "smoke", CURRENT_TESTCASE);
 		
 		//initialize elements of required pages
 		Login login = PageFactory.initElements(driver, Login.class);
@@ -26,8 +30,8 @@ public class Leave_TestCases extends BaseTestClass {
 		login.loginPageElements();
 		
 		//call login page other negative validations
-		
-		login.loginAPP(data[0], data[1]);
+		//login.loginAPP(data[0], data[1]);
+		login.loginAPP(data.get("user"), data.get("pwd"));
 		home.pageDisplayed();	
 	}
 	

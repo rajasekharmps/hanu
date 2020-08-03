@@ -9,7 +9,7 @@ public class Configuration {
 	public static String  CURRENT_TESTCASE = null;
 	
 	public static String SIT_URL 		= 	"http://testingmasters.com/hrm/";
-	
+		
 	public static String UAT_URL 		= 	"";
 	
 	public static String BROWSER_NAME	= 	"CHROME";
@@ -22,8 +22,12 @@ public class Configuration {
 	public static String TESTDATA_FILE 	= 	"HRM_TestData.xlsx";
 	
 	public static String RESULTS_PATH 	= 	System.getProperty("user.dir")+ "\\Results\\";
-	public static String RESULTS_FILE 	= 	"\\HRM_SummaryReport.html";		
-	
+	public static String RESULTS_FILE 	= 	"\\HRM_SummaryReport.html";
+		
+	public static String DB_DETAILS 	= 	"jdbc:mysql://13.233.50.231:3306/ors_db";	
+	public static String DB_USER		= 	"test_ors";
+	public static String DB_PWD			= 	"test@123";
+		
 	public static int MAX_WAIT_TIME 	= 	10;
 	public static int MID_WAIT_TIME 	= 	5;
 	public static int MIN_WAIT_TIME 	= 	1;	
