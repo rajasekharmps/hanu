@@ -2,8 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
-  	<classes>
-  	
+  	<classes>  	
   		<class name="com.dyt.hrm.testcases.Leave_TestCases">
   			<methods>
   				<include name="tc001_VerifyLoginAuthentication"/>

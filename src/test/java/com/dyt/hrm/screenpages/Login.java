@@ -3,8 +3,8 @@ package com.dyt.hrm.screenpages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.dyt.utilities.Reporter;
-import com.dyt.utilities.WebControls;
+import com.dyt.framework.ReporterLib;
+import com.dyt.webutilities.WebControls;
 
 public class Login extends WebControls {
 
@@ -19,32 +19,31 @@ public class Login extends WebControls {
 	public static WebElement editPassword;
 	
 	@FindBy(xpath="//input[@id='btnLogin']")
-	public static WebElement buttonLogin;	
+	public static WebElement buttonLogin;
 	
 	
-	//========= Login page behaviors(Verifications)============
-	
+	//========= Login page behaviors(Verifications)============	
 	public void pageDisplayed()
 	{
 		boolean retval;
 		retval = verifyPageTitle("OrangeHRM");
-		Reporter.log(retval, "Login page title displayed correctly", "Login page title displayed incorrectly");
+		ReporterLib.log(retval, "Login page title displayed correctly", "Login page title displayed incorrectly");
 	}
 	//------------------
 	public void loginPageElements()
 	{
 		boolean retval;
 		retval = isElementDisplayed(labelLoginPanel);
-		Reporter.log(retval, "Login Panel text displayed", "Login Panel text not displayed");
+		ReporterLib.log(retval, "Login Panel text displayed", "Login Panel text not displayed");
 		
 		retval = isElementDisplayed(editUserName);
-		Reporter.log(retval, "Username textbox displayed", "Username textbox not displayed");
+		ReporterLib.log(retval, "Username textbox displayed", "Username textbox not displayed");
 		
 		retval = isElementDisplayed(editPassword);
-		Reporter.log(retval, "Password textbox displayed", "Password textbox not displayed");
+		ReporterLib.log(retval, "Password textbox displayed", "Password textbox not displayed");
 		
 		retval = isElementDisplayed(buttonLogin);
-		Reporter.log(retval, "Login button displayed", "Login button not displayed");
+		ReporterLib.log(retval, "Login button displayed", "Login button not displayed");
 	}
 	//------------------
 	public void loginAPP(String userID, String Password)
@@ -52,17 +51,17 @@ public class Login extends WebControls {
 		boolean retval;
 		
 		retval = setEditValue(editUserName, userID);
-		Reporter.log(retval, "Username entered", "Username not entered");
+		ReporterLib.log(retval, "Username entered", "Username not entered");
 		
 		retval = setEditValue(editPassword, Password);
-		Reporter.log(retval, "Password entered", "Password not entered");
+		ReporterLib.log(retval, "Password entered", "Password not entered");
 		
 		retval = clickElement(buttonLogin);
-		Reporter.log(retval, "Login button clicked", "Login button not clicked");
+		ReporterLib.log(retval, "Login button clicked", "Login button not clicked");
 	}	
 	
 	//------------------	
-	//both empty
+	//both user id and password empty
 	
 	//user name empty
 	

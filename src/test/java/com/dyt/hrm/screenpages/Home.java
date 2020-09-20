@@ -3,8 +3,8 @@ package com.dyt.hrm.screenpages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.dyt.utilities.Reporter;
-import com.dyt.utilities.WebControls;
+import com.dyt.webutilities.Reporter;
+import com.dyt.webutilities.WebControls;
 
 public class Home extends WebControls{
 
@@ -39,7 +39,7 @@ public class Home extends WebControls{
 	{
 		boolean retval;
 		retval = isElementDisplayed(labelDashboard);
-		Reporter.log(retval, "Home page displayed", "Home page not displayed");
+		ReporterLib.log(retval, "Home page displayed", "Home page not displayed");
 	}
 	
 	public void HomePageElements()
@@ -51,27 +51,27 @@ public class Home extends WebControls{
 	{
 		boolean retval;
 		retval = mouseHover(menuLeave);
-		Reporter.log(retval, "Mouse hover to Leave menu successful", "Mouse hover to Leave menu unsuccessful");
+		ReporterLib.log(retval, "Mouse hover to Leave menu successful", "Mouse hover to Leave menu unsuccessful");
 		
 		retval = clickElement(submenuApply);
-		Reporter.log(retval, "Apply submenu option clicked", "Apply submenu option not clicked");
+		ReporterLib.log(retval, "Apply submenu option clicked", "Apply submenu option not clicked");
 	}
 	
 	public void navMyLeavePage()
 	{
 		boolean retval;
 		retval = mouseHover(menuLeave);
-		Reporter.log(retval, "Mouse hover to Leave menu successful", "Mouse hover to Leave menu unsuccessful");
+		ReporterLib.log(retval, "Mouse hover to Leave menu successful", "Mouse hover to Leave menu unsuccessful");
 		
 		retval = clickElement(submenuMyLeave);
-		Reporter.log(retval, "MyLeave submenu option clicked", "MyLeave submenu option not clicked");
+		ReporterLib.log(retval, "MyLeave submenu option clicked", "MyLeave submenu option not clicked");
 	}
 	
 	public void navMyInfoPage()
 	{
 		boolean retval;
 		retval = clickElement(menuMyInfo);
-		Reporter.log(retval, "MyInfo menu clicked", "MyInfo menu not clicked");
+		ReporterLib.log(retval, "MyInfo menu clicked", "MyInfo menu not clicked");
 	}
 	
 	
